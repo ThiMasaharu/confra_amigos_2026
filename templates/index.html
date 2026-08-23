@@ -3,43 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gincana Web - Eu Duvido</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Confra 2026 - Eu Duvido & Palavra Proibida</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#eef2ff',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                        }
-                    }
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: { brand: { 50: '#eef2ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' } }
                 }
             }
         }
     </script>
     <style>
-        .blur-theme {
-            filter: blur(12px);
-            user-select: none;
-            transition: all 0.3s ease;
-        }
-
-        /* =========================================================
-           PALETA PASTEL — visual claro, moderno e inspirado no Termo
-           ========================================================= */
         :root {
             --bg-page: #fffaf7;
             --bg-surface: #ffffff;
@@ -58,603 +37,244 @@
             --yellow-soft: #fff8dc;
             --rose: #e99ab0;
         }
-
-        body {
-            background: var(--bg-page) !important;
-            color: var(--ink) !important;
-        }
-
-        .bg-slate-950,
-        .bg-slate-950\/80 {
-            background: var(--bg-soft) !important;
-        }
-
-        .bg-slate-900,
-        .bg-slate-900\/80,
-        .bg-slate-900\/90 {
-            background: var(--bg-surface) !important;
-        }
-
-        .bg-slate-800,
-        .bg-slate-800\/80 {
-            background: var(--bg-muted) !important;
-        }
-
-        .border-slate-800,
-        .border-slate-800\/80,
-        .border-slate-700 {
-            border-color: var(--line) !important;
-        }
-
-        .text-slate-100,
-        .text-slate-200,
-        .text-slate-300 {
-            color: var(--ink) !important;
-        }
-
-        .text-slate-400,
-        .text-slate-500 {
-            color: var(--ink-soft) !important;
-        }
-
-        header {
-            background: rgba(255, 250, 247, .90) !important;
-            border-color: var(--line) !important;
-        }
-
-        .shadow-xl,
-        .shadow-2xl {
-            box-shadow: 0 18px 50px rgba(84, 67, 95, .10) !important;
-        }
-
-        .bg-gradient-to-br.from-slate-900 {
-            background: linear-gradient(135deg, #ffffff, #f8f2ff) !important;
-        }
-
-        .bg-gradient-to-br.from-slate-900.via-slate-900\/90.to-rose-950\/40 {
-            background: linear-gradient(135deg, #ffffff, #fff3ef) !important;
-        }
-
-        .from-indigo-500,
-        .to-violet-500,
-        .from-indigo-600,
-        .to-violet-600 {
-            --tw-gradient-from: var(--lavender) !important;
-            --tw-gradient-to: #c7b8ff !important;
-            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
-        }
-
-        .bg-indigo-600,
-        .bg-brand-600,
-        .bg-brand-500 {
-            background: var(--lavender) !important;
-        }
-
-        .hover\\:bg-indigo-500:hover,
-        .hover\\:bg-brand-500:hover,
-        .hover\\:bg-slate-700:hover {
-            background: #9b82ec !important;
-        }
-
-        .text-indigo-500,
-        .text-indigo-300 {
-            color: #8068ce !important;
-        }
-
-        .text-rose-400,
-        .text-rose-500 {
-            color: #cb6d88 !important;
-        }
-
+        body { background: var(--bg-page) !important; color: var(--ink) !important; }
+        .blur-theme { filter: blur(12px); user-select: none; transition: all .3s ease; }
+        .bg-slate-950,.bg-slate-950\/80 { background: var(--bg-soft) !important; }
+        .bg-slate-900,.bg-slate-900\/80,.bg-slate-900\/90 { background: var(--bg-surface) !important; }
+        .bg-slate-800,.bg-slate-800\/80 { background: var(--bg-muted) !important; }
+        .border-slate-800,.border-slate-800\/80,.border-slate-700 { border-color: var(--line) !important; }
+        .text-slate-100,.text-slate-200,.text-slate-300 { color: var(--ink) !important; }
+        .text-slate-400,.text-slate-500 { color: var(--ink-soft) !important; }
+        header { background: rgba(255,250,247,.90) !important; border-color: var(--line) !important; }
+        .shadow-xl,.shadow-2xl { box-shadow: 0 18px 50px rgba(84,67,95,.10) !important; }
+        .bg-gradient-to-br.from-slate-900 { background: linear-gradient(135deg,#fff,#f8f2ff) !important; }
+        .bg-gradient-to-br.from-slate-900.via-slate-900\/90.to-rose-950\/40 { background: linear-gradient(135deg,#fff,#fff3ef) !important; }
+        .from-indigo-500,.to-violet-500,.from-indigo-600,.to-violet-600 { --tw-gradient-from: var(--lavender) !important; --tw-gradient-to: #c7b8ff !important; --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to) !important; }
+        .bg-indigo-600,.bg-brand-600,.bg-brand-500 { background: var(--lavender) !important; }
+        .hover\:bg-indigo-500:hover,.hover\:bg-brand-500:hover,.hover\:bg-slate-700:hover { background: #9b82ec !important; }
+        .text-indigo-500,.text-indigo-300 { color: #8068ce !important; }
+        .text-rose-400,.text-rose-500 { color: #cb6d88 !important; }
         .bg-rose-600\/20 { background: var(--peach-soft) !important; }
         .bg-indigo-600\/20 { background: var(--lavender-soft) !important; }
-        .border-indigo-500\/20,
-        .border-indigo-500\/30 { border-color: #ddd2ff !important; }
+        .border-indigo-500\/20,.border-indigo-500\/30 { border-color: #ddd2ff !important; }
         .border-rose-500\/20 { border-color: #f2d2c9 !important; }
-
-        .bg-emerald-600 {
-            background: #87cdb5 !important;
-        }
-        .hover\\:bg-emerald-500:hover { background: #71bda4 !important; }
-
-        .bg-gradient-to-r.from-indigo-500.to-violet-500 {
-            background: linear-gradient(90deg, var(--lavender), #c7b8ff) !important;
-        }
-
+        .bg-emerald-600 { background: #87cdb5 !important; }
+        .hover\:bg-emerald-500:hover { background: #71bda4 !important; }
+        .bg-gradient-to-r.from-indigo-500.to-violet-500 { background: linear-gradient(90deg,var(--lavender),#c7b8ff) !important; }
         .bg-rose-500 { background: #df8da6 !important; }
-
-        #timer-display { color: #8068ce !important; }
-        #timer-bar { background: linear-gradient(90deg, var(--lavender), #c7b8ff) !important; }
-
-        .pastel-chip {
-            background: var(--yellow-soft);
-            color: #7c6731;
-            border: 1px solid #f0dfaa;
+        #timer-display,#proibida-timer-display { color: #8068ce !important; }
+        #timer-bar,#proibida-timer-bar { background: linear-gradient(90deg,var(--lavender),#c7b8ff) !important; }
+        .app-title { color: #5b4b8a !important; text-shadow: 0 1px 0 rgba(255,255,255,.55); }
+        .participant-card { position:relative; display:flex; flex-direction:column; justify-content:flex-end; }
+        .participant-photo { display:block; width:100%; height:190px; object-fit:cover; object-position:center; border-radius:1.25rem; border:3px solid #fff; box-shadow:0 10px 24px rgba(72,61,79,.16); background:#eee8ff; }
+        .participant-name { position:absolute; left:.6rem; right:.6rem; bottom:.55rem; z-index:2; color:#fff; font-weight:800; font-size:.85rem; text-align:center; text-shadow:0 1px 6px rgba(0,0,0,.65); }
+        .participant-card::after { content:""; position:absolute; inset:auto 0 0; height:45%; background:linear-gradient(transparent,rgba(0,0,0,.55)); pointer-events:none; }
+        .participant-fallback { width:100%; height:100%; min-height:120px; align-items:center; justify-content:center; font-size:3rem; font-weight:800; color:#5b4b8a; background:var(--lavender-soft); }
+        .team-members { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.85rem; margin-top:.8rem; }
+        .member-pill { min-height:190px; overflow:hidden; background:rgba(255,255,255,.88); border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 12px 28px rgba(72,61,79,.10); }
+        .pastel-chip { background:var(--yellow-soft); color:#7c6731; border:1px solid #f0dfaa; }
+        .forbidden-grid {
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:.8rem;
         }
-
-        .participant-photo {
-            width: 72px;
-            height: 72px;
-            object-fit: cover;
-            border-radius: 1.25rem;
-            border: 3px solid #ffffff;
-            box-shadow: 0 10px 24px rgba(72, 61, 79, .16);
-            background: #eee8ff;
-            flex: 0 0 auto;
+        .forbidden-chip {
+            background:var(--peach-soft);
+            color:#9a4a56;
+            border:1px solid #f2d2c9;
+            min-width:0;
+            min-height:4.15rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:clip;
+            line-height:1;
+            font-size:1rem;
+            padding:.65rem .8rem;
+            letter-spacing:-.015em;
         }
-
-        .app-title {
-            color: #5b4b8a !important;
-            text-shadow: 0 1px 0 rgba(255,255,255,.55);
+        .forbidden-chip:nth-child(5) {
+            grid-column:1 / -1;
         }
-
-        .team-members {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: .85rem;
-            margin-top: .8rem;
+        .forbidden-chip.is-wide {
+            grid-column:1 / -1;
         }
-
-        .member-pill {
-            position: relative;
-            display: block;
-            min-height: 190px;
-            overflow: hidden;
-            background: rgba(255,255,255,.88);
-            border: 1px solid var(--line);
-            border-radius: 1.25rem;
-            padding: 0;
-            box-shadow: 0 12px 28px rgba(72,61,79,.10);
+        @media (max-width:520px) {
+            .forbidden-grid { grid-template-columns:1fr; }
+            .forbidden-chip,
+            .forbidden-chip:nth-child(5),
+            .forbidden-chip.is-wide { grid-column:auto; }
         }
-        .participant-photo {
-            display: block;
-            width: 100%;
-            height: 190px;
-            object-fit: cover;
-            object-position: center;
-        }
-        @media (min-width: 768px) {
-            .member-pill,
-            .participant-photo { min-height: 230px; height: 230px; }
-        }
-
-        @media (max-width: 640px) {
-            .team-members {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .blur-theme {
-            filter: blur(12px);
-            user-select: none;
-            transition: all .3s ease;
-        }
+        .card-answer { background:var(--lavender-soft); border:1px solid #ddd2ff; }
+        .proibida-card { background:linear-gradient(145deg,#fff,#fff9f5); }
+        .pulse-soft { animation:pulse-soft 1s ease-in-out infinite; }
+        @keyframes pulse-soft { 0%,100% { box-shadow:0 0 0 0 rgba(223,141,166,.0);} 50% { box-shadow:0 0 0 10px rgba(223,141,166,.10);} }
+        @media (min-width:768px) { .member-pill,.participant-photo { min-height:230px; height:230px; } }
+        @media (max-width:640px) { .team-members { grid-template-columns:1fr; } }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
+<body class="font-sans min-h-screen flex flex-col" data-eu-duvido-score-a="{{ placar_eu_duvido.equipe_a|int }}" data-eu-duvido-score-b="{{ placar_eu_duvido.equipe_b|int }}" data-proibida-score-a="{{ placar_proibida.equipe_a|int }}" data-proibida-score-b="{{ placar_proibida.equipe_b|int }}">
+<header class="border-b border-slate-800 sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+        <div>
+            <h1 class="app-title text-xl font-extrabold tracking-tight">Confra nerdola 2026</h1>
+            <p class="text-xs text-slate-400 font-medium">Sessão dos Esquisitos</p>
+        </div>
+        <nav class="flex flex-wrap items-center gap-2">
+            <button onclick="trocarAba('game')" id="nav-game" class="px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 text-white transition flex items-center gap-2 shadow-sm"><i class="fa-solid fa-gavel"></i> Eu Duvido</button>
+            <button onclick="trocarAba('proibida')" id="nav-proibida" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center gap-2 border border-slate-700"><i class="fa-solid fa-ban"></i> Palavra Proibida</button>
+            <button onclick="trocarAba('rules')" id="nav-rules" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center gap-2 border border-slate-700"><i class="fa-solid fa-book-open"></i> Regras</button>
+        </nav>
+    </div>
+</header>
 
-    <!-- Navegação Superior -->
-    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
-            <div>
-                <h1 class="app-title text-xl font-extrabold tracking-tight">
-                    Confra nerdola 2026
-                </h1>
-                <p class="text-xs text-slate-400 font-medium">Sessão dos Esquisitos</p>
+<main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
+    <section id="section-game" class="space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gradient-to-br from-slate-900 via-slate-900/90 to-indigo-950/40 border border-indigo-500/20 rounded-2xl p-6 relative overflow-hidden shadow-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <div><span class="text-xs uppercase tracking-wider font-bold text-indigo-500 bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20">Equipe 1</span><div id="members-a" class="team-members"></div></div>
+                    <div class="text-right"><span id="score-a" class="text-5xl font-black text-indigo-500 font-mono tracking-tight">{{ placar_eu_duvido.equipe_a }}</span><p class="text-xs text-slate-400 mt-1">Pontos</p></div>
+                </div>
+                <div class="flex gap-2 mt-4 pt-4 border-t border-slate-800/80">
+                    <button onclick="modificarPlacar('equipe_a',1,'eu_duvido')" class="flex-1 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 font-bold py-2 rounded-xl transition border border-indigo-500/30 flex items-center justify-center gap-2"><i class="fa-solid fa-plus text-xs"></i> 1 Ponto</button>
+                    <button onclick="modificarPlacar('equipe_a',-1,'eu_duvido')" class="px-3 bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold py-2 rounded-xl transition border border-slate-700"><i class="fa-solid fa-minus text-xs"></i></button>
+                </div>
             </div>
-
-            <!-- Seletores de Jogo & Regras -->
-            <div class="flex items-center gap-2">
-                <button onclick="trocarAba('game')" id="nav-game" class="px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 text-white transition flex items-center gap-2 shadow-sm">
-                    <i class="fa-solid fa-gamepad"></i> Eu Duvido
-                </button>
-                <button onclick="trocarAba('proibida')" id="nav-proibida" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center gap-2 border border-slate-700">
-                    <i class="fa-solid fa-ban"></i> Palavra Proibida <span class="text-[10px] uppercase tracking-wider bg-slate-700 text-amber-400 px-1.5 py-0.5 rounded">Em breve</span>
-                </button>
-                <button onclick="trocarAba('rules')" id="nav-rules" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center gap-2 border border-slate-700">
-                    <i class="fa-solid fa-book-open"></i> Regras
-                </button>
+            <div class="bg-gradient-to-br from-slate-900 via-slate-900/90 to-rose-950/40 border border-rose-500/20 rounded-2xl p-6 relative overflow-hidden shadow-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <div><span class="text-xs uppercase tracking-wider font-bold text-rose-400 bg-rose-500/10 px-2.5 py-1 rounded-md border border-rose-500/20">Equipe 2</span><div id="members-b" class="team-members"></div></div>
+                    <div class="text-right"><span id="score-b" class="text-5xl font-black text-rose-400 font-mono tracking-tight">{{ placar_eu_duvido.equipe_b }}</span><p class="text-xs text-slate-400 mt-1">Pontos</p></div>
+                </div>
+                <div class="flex gap-2 mt-4 pt-4 border-t border-slate-800/80">
+                    <button onclick="modificarPlacar('equipe_b',1,'eu_duvido')" class="flex-1 bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 font-bold py-2 rounded-xl transition border border-rose-500/30 flex items-center justify-center gap-2"><i class="fa-solid fa-plus text-xs"></i> 1 Ponto</button>
+                    <button onclick="modificarPlacar('equipe_b',-1,'eu_duvido')" class="px-3 bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold py-2 rounded-xl transition border border-slate-700"><i class="fa-solid fa-minus text-xs"></i></button>
+                </div>
             </div>
         </div>
-    </header>
+        <div class="flex justify-center">
+            <button onclick="sortearEquipes()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 transition flex items-center gap-2 shadow-md"><i class="fa-solid fa-shuffle text-indigo-500"></i> Sortear Duplas</button>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center space-y-6 shadow-2xl">
+            <div class="space-y-2"><span class="text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Tema Atual</span><div class="min-h-[100px] flex items-center justify-center px-4"><p id="theme-display" class="text-2xl md:text-4xl font-extrabold tracking-tight">Clique em "Gerar Tema" para iniciar a rodada!</p></div></div>
+            <div class="bg-slate-950/80 border border-slate-800/80 rounded-2xl p-6 max-w-md mx-auto space-y-3">
+                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider flex items-center justify-center gap-2"><i class="fa-regular fa-clock text-indigo-500"></i> Tempo Restante</div>
+                <div id="timer-display" class="text-6xl font-black font-mono tracking-wider">01:00</div>
+                <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden"><div id="timer-bar" class="h-2.5 rounded-full w-full transition-all duration-1000"></div></div>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
+                <button id="btn-generate" onclick="gerarTema()" class="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles"></i> 1. Gerar Tema</button>
+                <button id="btn-hide" onclick="ocultarTema()" disabled class="bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed text-slate-200 font-bold px-6 py-3.5 rounded-xl border border-slate-700 transition flex items-center gap-2"><i id="hide-icon" class="fa-solid fa-eye-slash text-amber-400"></i> <span id="hide-label">2. Ocultar Tema</span></button>
+                <button id="btn-start-timer" onclick="iniciarContagem()" disabled class="bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2"><i class="fa-solid fa-play"></i> 3. Iniciar Contagem (1 min)</button>
+            </div>
+        </div>
+    </section>
 
-    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
-
-        <!-- ================= ABA 1: JOGO EU DUVIDO ================= -->
-        <section id="section-game" class="space-y-8">
-
-            <!-- Painel de Equipes e Placar -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Equipe A -->
-                <div class="bg-gradient-to-br from-slate-900 via-slate-900/90 to-indigo-950/40 border border-indigo-500/20 rounded-2xl p-6 relative overflow-hidden shadow-xl">
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-xs uppercase tracking-wider font-bold text-indigo-500 bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20">Equipe 1</span>
-                            <div id="members-a" class="team-members"></div>
-                        </div>
-                        <div class="text-right">
-                            <span id="score-a" class="text-5xl font-black text-indigo-500 font-mono tracking-tight">{{ placar.equipe_a }}</span>
-                            <p class="text-xs text-slate-400 mt-1">Pontos</p>
-                        </div>
+    <section id="section-proibida" class="hidden space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-7 shadow-2xl">
+                <div class="flex flex-wrap justify-between gap-3 items-center mb-5">
+                    <div>
+                        <p class="text-xs uppercase font-bold tracking-widest text-slate-400">Rodada</p>
+                        <h2 class="text-3xl font-black">Palavra Proibida</h2>
                     </div>
-                    <div class="flex gap-2 mt-4 pt-4 border-t border-slate-800/80">
-                        <button onclick="modificarPlacar('equipe_a', 1)" class="flex-1 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 font-bold py-2 rounded-xl transition border border-indigo-500/30 flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-plus text-xs"></i> 1 Ponto
-                        </button>
-                        <button onclick="modificarPlacar('equipe_a', -1)" class="px-3 bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold py-2 rounded-xl transition border border-slate-700">
-                            <i class="fa-solid fa-minus text-xs"></i>
-                        </button>
-                    </div>
+                    <span id="proibida-theme" class="pastel-chip text-xs font-bold px-3 py-1.5 rounded-full">Aguardando início</span>
                 </div>
 
-                <!-- Equipe B -->
-                <div class="bg-gradient-to-br from-slate-900 via-slate-900/90 to-rose-950/40 border border-rose-500/20 rounded-2xl p-6 relative overflow-hidden shadow-xl">
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-xs uppercase tracking-wider font-bold text-rose-400 bg-rose-500/10 px-2.5 py-1 rounded-md border border-rose-500/20">Equipe 2</span>
-                            <div id="members-b" class="team-members"></div>
+                <div class="proibida-card rounded-3xl border border-slate-800 p-6 md:p-8 text-center space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="card-answer rounded-2xl p-5">
+                            <p class="text-xs uppercase tracking-widest font-bold text-slate-400">PALAVRA A ADIVINHAR</p>
+                            <div id="proibida-answer" class="mt-2 text-4xl md:text-5xl font-black">—</div>
                         </div>
-                        <div class="text-right">
-                            <span id="score-b" class="text-5xl font-black text-rose-400 font-mono tracking-tight">{{ placar.equipe_b }}</span>
-                            <p class="text-xs text-slate-400 mt-1">Pontos</p>
+                        <div class="rounded-2xl p-5 bg-slate-950 border border-slate-800">
+                            <p class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-3">5 PALAVRAS PROIBIDAS</p>
+                            <div id="proibida-list" class="forbidden-grid"></div>
                         </div>
                     </div>
-                    <div class="flex gap-2 mt-4 pt-4 border-t border-slate-800/80">
-                        <button onclick="modificarPlacar('equipe_b', 1)" class="flex-1 bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 font-bold py-2 rounded-xl transition border border-rose-500/30 flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-plus text-xs"></i> 1 Ponto
+
+                    <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 space-y-3">
+                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-clock text-indigo-500"></i> Tempo restante
+                        </div>
+                        <div id="proibida-timer-display" class="text-6xl font-black font-mono tracking-wider">01:00</div>
+                        <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
+                            <div id="proibida-timer-bar" class="h-2.5 rounded-full w-full"></div>
+                        </div>
+                        <div id="proibida-round-status" class="text-sm text-slate-400">Pressione “Iniciar 1 minuto” para gerar a primeira carta.</div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <button id="btn-correct" onclick="registrarPalavra('acerto')" disabled class="bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white font-bold py-3.5 rounded-xl">
+                            <i class="fa-solid fa-check mr-2"></i>Acertou +1
                         </button>
-                        <button onclick="modificarPlacar('equipe_b', -1)" class="px-3 bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold py-2 rounded-xl transition border border-slate-700">
-                            <i class="fa-solid fa-minus text-xs"></i>
+                        <button id="btn-skip" onclick="registrarPalavra('pulo')" disabled class="bg-slate-800 hover:bg-slate-700 disabled:opacity-50 text-slate-200 font-bold py-3.5 rounded-xl border border-slate-700">
+                            <i class="fa-solid fa-forward-step mr-2"></i>Pular
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2 border-t border-slate-800">
+                        <label class="md:col-span-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-left">
+                            <span class="block text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-1">Dupla da vez</span>
+                            <select id="proibida-team" class="w-full bg-transparent font-bold outline-none">
+                                <option value="equipe_a">Equipe 1</option>
+                                <option value="equipe_b">Equipe 2</option>
+                            </select>
+                        </label>
+                        <button id="btn-start-proibida" onclick="iniciarRodadaProibida()" class="md:col-span-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white font-bold px-6 py-3.5 rounded-xl flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play"></i> Iniciar 1 minuto
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Botões de Controle de Sorteio de Equipes -->
-            <div class="flex justify-center">
-                <button onclick="sortearEquipes()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 transition flex items-center gap-2 shadow-md">
-                    <i class="fa-solid fa-shuffle text-indigo-500"></i> Sortear Duplas
-                </button>
-            </div>
-
-            <!-- Arena Principal do Tema e Cronômetro -->
-            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center space-y-6 shadow-2xl relative overflow-hidden">
-                
-                <div class="space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
-                        Tema Atual
-                    </span>
-                    
-                    <!-- Exibição do Tema -->
-                    <div class="min-h-[100px] flex items-center justify-center px-4">
-                        <p id="theme-display" class="text-2xl md:text-4xl font-extrabold text-slate-100 tracking-tight transition-all duration-300">
-                            Clique em "Gerar Tema" para iniciar a rodada!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Painel do Cronômetro -->
-                <div class="bg-slate-950/80 border border-slate-800/80 rounded-2xl p-6 max-w-md mx-auto space-y-3">
-                    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider flex items-center justify-center gap-2">
-                        <i class="fa-regular fa-clock text-indigo-500"></i> Tempo Restante
-                    </div>
-                    <div id="timer-display" class="text-6xl font-black font-mono tracking-wider text-indigo-500">
-                        01:00
-                    </div>
-                    <!-- Barra de Progresso do Cronômetro -->
-                    <div class="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
-                        <div id="timer-bar" class="bg-gradient-to-r from-indigo-500 to-violet-500 h-2.5 rounded-full w-full transition-all duration-1000"></div>
-                    </div>
-                </div>
-
-                <!-- Botões do Fluxo Principal do Jogo -->
-                <div class="flex flex-wrap justify-center items-center gap-4 pt-4">
-                    <!-- 1. Gerar Tema -->
-                    <button id="btn-generate" onclick="gerarTema()" class="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-600/30 transition-all flex items-center gap-2 transform active:scale-95">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> 1. Gerar Tema
-                    </button>
-
-                    <!-- 2. Ocultar Tema -->
-                    <button id="btn-hide" onclick="ocultarTema()" disabled class="bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed text-slate-200 font-bold px-6 py-3.5 rounded-xl border border-slate-700 transition flex items-center gap-2">
-                        <i id="hide-icon" class="fa-solid fa-eye-slash text-amber-400"></i> <span id="hide-label">2. Ocultar Tema</span>
-                    </button>
-
-                    <!-- 3. Iniciar Contagem -->
-                    <button id="btn-start-timer" onclick="iniciarContagem()" disabled class="bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/30 transition flex items-center gap-2 transform active:scale-95">
-                        <i class="fa-solid fa-play"></i> 3. Iniciar Contagem (1 min)
-                    </button>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ================= ABA 2: PALAVRA PROIBIDA (PLACEHOLDER) ================= -->
-        <section id="section-proibida" class="hidden space-y-6 text-center py-12">
-            <div class="max-w-md mx-auto space-y-4 bg-slate-900 border border-slate-800 rounded-3xl p-8">
-                <div class="w-16 h-16 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center mx-auto border border-amber-500/20 text-2xl">
-                    <i class="fa-solid fa-lock"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-slate-100">Palavra Proibida</h2>
-                <p class="text-sm text-slate-400">
-                    O módulo para o jogo <strong>Palavra Proibida</strong> está estruturado e será ativado no próximo update!
-                </p>
-                <button onclick="trocarAba('game')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2.5 rounded-xl transition text-sm">
-                    Voltar para Eu Duvido
-                </button>
-            </div>
-        </section>
-
-        <!-- ================= ABA 3: REGRAS DO JOGO ================= -->
-        <section id="section-rules" class="hidden space-y-8">
-            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-8">
-                
+            <aside class="bg-slate-900 border border-slate-800 rounded-3xl p-7 shadow-xl space-y-5">
                 <div>
-                    <h2 class="text-3xl font-extrabold text-slate-100 mb-2">📜 Como Jogar "Eu Duvido"</h2>
-                    <p class="text-slate-400">O jogo de leilão e pressão!</p>
+                    <p class="text-xs uppercase tracking-widest font-bold text-slate-400">Duplas da partida</p>
+                    <h3 class="text-xl font-bold mt-1">Sorteio manual</h3>
+                </div>
+                <p class="text-sm text-slate-400">As duplas só mudam quando você clicar em “Sortear Duplas”, exatamente como no Eu Duvido.</p>
+
+                <div class="space-y-3">
+                    <div class="rounded-2xl p-4 bg-indigo-500/10 border border-indigo-500/20">
+                        <div class="flex justify-between items-center mb-3"><span class="text-xs font-bold text-indigo-500 uppercase">Equipe 1</span><span id="proibida-score-a" class="text-2xl font-black text-indigo-500">{{ placar_eu_duvido.equipe_a }}</span></div>
+                        <div id="proibida-members-a" class="grid grid-cols-2 gap-2"></div>
+                    </div>
+                    <div class="rounded-2xl p-4 bg-rose-500/10 border border-rose-500/20">
+                        <div class="flex justify-between items-center mb-3"><span class="text-xs font-bold text-rose-400 uppercase">Equipe 2</span><span id="proibida-score-b" class="text-2xl font-black text-rose-400">{{ placar_eu_duvido.equipe_b }}</span></div>
+                        <div id="proibida-members-b" class="grid grid-cols-2 gap-2"></div>
+                    </div>
                 </div>
 
-                <!-- Visuais / Fluxograma do Jogo -->
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-                    
-                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
-                        <div class="w-10 h-10 bg-indigo-500/20 text-indigo-500 rounded-xl flex items-center justify-center font-bold text-lg">1</div>
-                        <h3 class="font-bold text-slate-200">Gerar Tema</h3>
-                        <p class="text-xs text-slate-400">O sistema consulta a LLM e traz um tema aleatório que nem o desenvolvedor sabe.</p>
-                    </div>
-
-                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
-                        <div class="w-10 h-10 bg-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center font-bold text-lg">2</div>
-                        <h3 class="font-bold text-slate-200">Leilão de Palavras</h3>
-                        <p class="text-xs text-slate-400">Um participante de cada dupla vê o tema. O que vê o tema lança lances em voz alta de quantas palavras o outro participante consegue falar.</p>
-                    </div>
-
-                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
-                        <div class="w-10 h-10 bg-rose-500/20 text-rose-400 rounded-xl flex items-center justify-center font-bold text-lg">3</div>
-                        <h3 class="font-bold text-slate-200">O "Duvido!"</h3>
-                        <p class="text-xs text-slate-400">Quando uma dupla acha o lance alto demais, ela fala <strong>"Duvido!"</strong>. Clique em "Ocultar Tema" antes da prova.</p>
-                    </div>
-
-                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
-                        <div class="w-10 h-10 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center font-bold text-lg">4</div>
-                        <h3 class="font-bold text-slate-200">Contagem (1 min)</h3>
-                        <p class="text-xs text-slate-400">Clique em "Iniciar Contagem". O tema é revelado e o cronômetro de 60 segundos começa!</p>
-                    </div>
-
-                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
-                        <div class="w-10 h-10 bg-violet-500/20 text-violet-400 rounded-xl flex items-center justify-center font-bold text-lg">5</div>
-                        <h3 class="font-bold text-slate-200">Pontuação</h3>
-                        <p class="text-xs text-slate-400">Se o jogador atingir a meta, a dupla dele ganha +1 ponto. Se falhar, a outra dupla ganha +1 ponto.</p>
-                    </div>
-
+                <div class="bg-slate-950 rounded-2xl p-4 border border-slate-800 space-y-2 text-sm text-slate-400">
+                    <p><strong>Fluxo:</strong> escolha a dupla, clique em “Iniciar 1 minuto” e o sistema gera a primeira carta.</p>
+                    <p><strong>Acertou:</strong> +1 e próxima carta. <strong>Pular:</strong> 0 e próxima carta.</p>
+                    <p><strong>Importante:</strong> durante a geração da próxima carta, o cronômetro fica pausado.</p>
                 </div>
+            </aside>
+        </div>
+    </section>
 
-                <!-- Detalhes das Regras em Texto -->
-                <div class="space-y-4 pt-4 border-t border-slate-800">
-                    <h3 class="text-xl font-bold text-slate-200">📌 Regras Adicionais</h3>
-                    <ul class="list-disc list-inside space-y-2 text-sm text-slate-300">
-                        <li><strong>Dica de Dinâmica:</strong> Os parceiros que responderão não poderão olhar para o tema durante a fase de leilão para não saberem o tema com antecedência!</li>
-                        <li><strong>Validação de Palavras:</strong> Não valem palavras repetidas, nem derivadas óbvias no mesmo tempo verbal/masculino/feminino, exceto se especificado no tema.</li>
-                    </ul>
+    <section id="section-rules" class="hidden space-y-8">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-8 shadow-xl">
+            <div><h2 class="text-3xl font-extrabold">📜 Regras dos jogos</h2><p class="text-slate-400 mt-1">Tudo que a mesa precisa saber antes de começar.</p></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+                    <div class="flex items-center gap-3"><span class="w-10 h-10 bg-indigo-500/20 text-indigo-500 rounded-xl flex items-center justify-center font-bold">1</span><h3 class="text-xl font-bold">Eu Duvido</h3></div>
+                    <div class="space-y-3 text-sm text-slate-400"><p>O Gemini gera um tema aleatório e equilibrado. O jogo segue a disputa de lances até alguém dizer “Duvido!”.</p><p>Antes da prova, o tema pode ser ocultado. Ao iniciar, o cronômetro de 60 segundos começa.</p><p>Se o jogador alcançar a quantidade anunciada no leilão, a dupla ganha 1 ponto. Caso contrário, a outra dupla ganha 1 ponto.</p><p>Não valem palavras repetidas nem derivados óbvios quando a regra do tema exigir respostas distintas.</p></div>
                 </div>
-
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+                    <div class="flex items-center gap-3"><span class="w-10 h-10 bg-rose-500/20 text-rose-400 rounded-xl flex items-center justify-center font-bold">2</span><h3 class="text-xl font-bold">Palavra Proibida</h3></div>
+                    <div class="space-y-3 text-sm text-slate-400"><p>Cada dupla tem 60 segundos para acertar o maior número possível de palavras.</p><p>Uma pessoa vê a palavra-alvo e dá as dicas; a outra precisa adivinhar.</p><p>Cada carta possui 5 palavras proibidas. Elas não podem aparecer nas dicas, nem seus derivados óbvios com o mesmo radical.</p><p>Sinônimos e frases completas são permitidos desde que não contenham uma palavra proibida, derivação proibida ou o mesmo radical da resposta.</p><p>Cada acerto vale 1 ponto. Pular uma carta não soma pontos. Usar uma palavra proibida encerra a tentativa daquela carta sem ponto.</p><p>O baralho é infinito: ao solicitar uma nova carta, o Gemini gera outra mantendo variedade e evitando repetições recentes.</p></div>
+                </div>
             </div>
-        </section>
-
-    </main>
-
-    <!-- LÓGICA JAVASCRIPT DO FRONTEND -->
-    <script>
-        let temaAtualText = "";
-        let timerInterval = null;
-        let tempoRestante = 60;
-        let temaOcultado = false;
-
-        // O placar é persistido na sessão do Flask e vem preenchido pelo template.
-        // Estes valores evitam que a interface volte visualmente para zero ao recarregar.
-        const placarInicial = {
-            equipe_a: {{ placar.equipe_a|int }},
-            equipe_b: {{ placar.equipe_b|int }}
-        };
-
-        document.getElementById('score-a').innerText = placarInicial.equipe_a;
-        document.getElementById('score-b').innerText = placarInicial.equipe_b;
-
-        // Navegação entre abas
-        function trocarAba(aba) {
-            document.getElementById('section-game').classList.add('hidden');
-            document.getElementById('section-proibida').classList.add('hidden');
-            document.getElementById('section-rules').classList.add('hidden');
-
-            document.getElementById('nav-game').className = "px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center gap-2 border border-slate-700";
-            document.getElementById('nav-proibida').className = "px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center gap-2 border border-slate-700";
-            document.getElementById('nav-rules').className = "px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center gap-2 border border-slate-700";
-
-            if (aba === 'game') {
-                document.getElementById('section-game').classList.remove('hidden');
-                document.getElementById('nav-game').className = "px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 text-white transition flex items-center gap-2 shadow-sm";
-            } else if (aba === 'proibida') {
-                document.getElementById('section-proibida').classList.remove('hidden');
-                document.getElementById('nav-proibida').className = "px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 text-white transition flex items-center gap-2 shadow-sm";
-            } else if (aba === 'rules') {
-                document.getElementById('section-rules').classList.remove('hidden');
-                document.getElementById('nav-rules').className = "px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 text-white transition flex items-center gap-2 shadow-sm";
-            }
-        }
-
-        // Caminho das fotos — substitua os arquivos dentro de /static/images/participantes/.
-        const fotosParticipantes = {
-            "Thiago": "{{ url_for('static', filename='images/participantes/thiago.jpg') }}",
-            "Laís": "{{ url_for('static', filename='images/participantes/lais.jpg') }}",
-            "Couto": "{{ url_for('static', filename='images/participantes/couto.jpg') }}",
-            "Juan": "{{ url_for('static', filename='images/participantes/juan.jpg') }}"
-        };
-
-        function renderizarMembros(elementId, membros) {
-            const container = document.getElementById(elementId);
-            container.innerHTML = membros.map(nome => `
-                <span class="member-pill">
-                    <img
-                        class="participant-photo"
-                        src="${fotosParticipantes[nome] || ''}"
-                        alt="Foto de participante"
-                        onerror="this.style.display='none'"
-                    >
-                </span>
-            `).join('');
-        }
-
-        // Sorteio de Duplas
-        async function sortearEquipes() {
-            try {
-                const response = await fetch('/api/sortear-equipes', { method: 'POST' });
-                const data = await response.json();
-                if (data.success) {
-                    renderizarMembros('members-a', data.equipes.equipe_a);
-                    renderizarMembros('members-b', data.equipes.equipe_b);
-                }
-            } catch (err) {
-                alert('Erro ao sortear equipes.');
-            }
-        }
-
-        // Gerar Tema com a API do Gemini
-        async function gerarTema() {
-            const display = document.getElementById('theme-display');
-            const btnGen = document.getElementById('btn-generate');
-            
-            btnGen.disabled = true;
-            display.innerText = "Consultando Gemini API...";
-            display.classList.remove('blur-theme');
-            temaOcultado = false;
-
-            try {
-                const response = await fetch('/api/gerar-tema', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify({})
-                });
-                const data = await response.json();
-                if (response.ok && data.success) {
-                    temaAtualText = data.tema;
-                    display.innerText = temaAtualText;
-                    
-                    document.getElementById('btn-hide').disabled = false;
-                    document.getElementById('hide-label').innerText = '2. Ocultar Tema';
-                    document.getElementById('hide-icon').className = 'fa-solid fa-eye-slash text-amber-400';
-                    document.getElementById('btn-start-timer').disabled = false;
-                    resetarCronometroVisual();
-                } else {
-                    display.innerText = "Erro: " + (data.error || "Não foi possível obter o tema.");
-                }
-            } catch (err) {
-                display.innerText = "Erro: " + (err.message || "Falha de conexão ao gerar tema.");
-            } finally {
-                btnGen.disabled = false;
-            }
-        }
-
-        // Oculta/reexibe o tema usando o mesmo botão.
-        function ocultarTema() {
-            if (!temaAtualText) return;
-
-            const display = document.getElementById('theme-display');
-            const label = document.getElementById('hide-label');
-            const icon = document.getElementById('hide-icon');
-
-            if (temaOcultado) {
-                display.innerText = temaAtualText;
-                display.classList.remove('blur-theme');
-                temaOcultado = false;
-                label.innerText = '2. Ocultar Tema';
-                icon.className = 'fa-solid fa-eye-slash text-amber-400';
-            } else {
-                display.innerText = "🙈 TEMA OCULTO (Aguardando Leilão/Início)";
-                display.classList.add('blur-theme');
-                temaOcultado = true;
-                label.innerText = '2. Reexibir Tema';
-                icon.className = 'fa-solid fa-eye text-emerald-500';
-            }
-        }
-
-        // Iniciar Contagem de 1 Minuto
-        function iniciarContagem() {
-            if (!temaAtualText) return;
-
-            // Revela o tema oculto
-            const display = document.getElementById('theme-display');
-            display.innerText = temaAtualText;
-            display.classList.remove('blur-theme');
-            temaOcultado = false;
-
-            // Reinicia e dispara o cronômetro
-            clearInterval(timerInterval);
-            tempoRestante = 60;
-            atualizarDisplayCronometro();
-
-            document.getElementById('btn-start-timer').disabled = true;
-
-            timerInterval = setInterval(() => {
-                tempoRestante--;
-                atualizarDisplayCronometro();
-
-                if (tempoRestante <= 0) {
-                    clearInterval(timerInterval);
-                    document.getElementById('btn-start-timer').disabled = false;
-                }
-            }, 1000);
-        }
-
-        function atualizarDisplayCronometro() {
-            const seg = tempoRestante < 10 ? '0' + tempoRestante : tempoRestante;
-            const timerDisplay = document.getElementById('timer-display');
-            const timerBar = document.getElementById('timer-bar');
-
-            timerDisplay.innerText = `00:${seg}`;
-
-            // Atualiza cor e barra
-            const pct = (tempoRestante / 60) * 100;
-            timerBar.style.width = `${pct}%`;
-
-            if (tempoRestante <= 10) {
-                timerDisplay.className = "text-6xl font-black font-mono tracking-wider text-rose-500 animate-pulse";
-                timerBar.className = "bg-rose-500 h-2.5 rounded-full transition-all duration-1000";
-            } else {
-                timerDisplay.className = "text-6xl font-black font-mono tracking-wider text-indigo-500";
-                timerBar.className = "bg-gradient-to-r from-indigo-500 to-violet-500 h-2.5 rounded-full transition-all duration-1000";
-            }
-        }
-
-        function resetarCronometroVisual() {
-            clearInterval(timerInterval);
-            tempoRestante = 60;
-            document.getElementById('timer-display').innerText = "01:00";
-            document.getElementById('timer-display').className = "text-6xl font-black font-mono tracking-wider text-indigo-500";
-            document.getElementById('timer-bar').style.width = "100%";
-        }
-
-
-        // Alteração Manual do Placar
-        async function modificarPlacar(equipe, delta) {
-            try {
-                const response = await fetch('/api/atualizar-placar', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ equipe: equipe, delta: delta })
-                });
-                const data = await response.json();
-                if (data.success) {
-                    document.getElementById('score-a').innerText = data.placar.equipe_a;
-                    document.getElementById('score-b').innerText = data.placar.equipe_b;
-                }
-            } catch (err) {
-                console.error("Erro ao atualizar placar:", err);
-            }
-        }
-
-    </script>
+            <div class="bg-yellow-50 rounded-2xl p-5 border border-yellow-200 text-sm text-slate-700"><strong>Importante:</strong> o sistema faz uma validação automática básica das cartas geradas pelo Gemini. A decisão final sobre uma dica em uma rodada continua sendo da mesa.</div>
+        </div>
+    </section>
+</main>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
