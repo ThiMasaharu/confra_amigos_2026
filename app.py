@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from flask import Flask, jsonify, render_template, request, session
 from google import genai
 from google.genai import types
+from google.genai.errors import APIError, ClientError
 
 load_dotenv()
 
@@ -135,20 +136,41 @@ def extrair_json(texto: str) -> dict:
         if not match:
             raise ValueError("Gemini não retornou JSON válido.")
         return json.loads(match.group(0))
-
+    
 
 def gerar_com_gemini(prompt: str) -> str:
     if not client:
         raise RuntimeError("GEMINI_API_KEY não configurada no ambiente.")
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt,
+    # Lista ordenada: modelo principal -> fallback
+    modelos = ["gemini-3.1-flash-lite", "gemini-3.5-flash-lite"]
+
+    for modelo in modelos:
+        try:
+            response = client.models.generate_content(
+                model=modelo,
+                contents=prompt,
+            )
+            texto = (getattr(response, "text", None) or "").strip()
+            if texto:
+                return texto
+
+        except (ClientError, APIError) as e:
+            # Verifica se o erro foi estouro de cota (Status Code 429 / RESOURCE_EXHAUSTED)
+            status_code = getattr(e, "code", None) or getattr(
+                e, "status_code", None
+            )
+            if (
+                status_code == 429
+                or "429" in str(e)
+                or "RESOURCE_EXHAUSTED" in str(e)
+            ):
+                continue  # Avança para o próximo modelo da lista
+            raise e  # Lança o erro caso seja outra falha (ex: chave inválida 401)
+
+    raise RuntimeError(
+        "O Gemini não retornou conteúdo em nenhum dos modelos tentados."
     )
-    texto = (getattr(response, "text", None) or "").strip()
-    if not texto:
-        raise RuntimeError("O Gemini não retornou conteúdo.")
-    return texto
 
 
 @app.route("/")
