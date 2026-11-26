@@ -18,7 +18,7 @@ app.secret_key = os.getenv("SECRET_KEY", "dev-secret-change-me")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 
-MEMBROS_PADRAO = ["Thiago", "Laís", "Couto", "Juan"]
+MEMBROS_PADRAO = ["Thiago", "Laís", "Couto", "Juan", "Adrimel"]
 PLACAR_PADRAO = {"equipe_a": 0, "equipe_b": 0}
 EQUIPES_PADRAO = {"equipe_a": [], "equipe_b": []}
 

@@ -12,7 +12,8 @@ const fotosParticipantes = {
     Thiago: "/static/images/participantes/thiago.jpg",
     "Laís": "/static/images/participantes/lais.jpg",
     Couto: "/static/images/participantes/couto.jpg",
-    Juan: "/static/images/participantes/juan.jpg"
+    Juan: "/static/images/participantes/juan.jpg",
+    Adrimel: "/static/images/participantes/adrimel.jpg"
 };
 
 const corpo = document.body;
